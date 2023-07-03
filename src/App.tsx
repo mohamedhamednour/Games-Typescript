@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useState } from "react"
-import  HangmanDrawing  from "./components/Hungmandruing"
+import HangmanDrawing from "./components/Hungmandruing"
 import { HangmanWord } from "./components/Hungmanword"
 import { Keyboard } from "./components/Keyboard"
 import words from "./components/words.json"
@@ -79,8 +79,8 @@ function App() {
         {isLoser && "Nice Try - Refresh to try again"}
       </div>
       <HangmanDrawing numberOfGuesses={incorrectLetters.length} />
-      {isWinner || isLoser ?<button className="bg-red-300 rounded-lg p-2 text-white" onClick={()=> window.location.reload()}>try again  </button> : ''}
-      <center className="text-[30px] uppercase" > first liter is : <span className="text-red-500">{wordToGuess.slice(0,1)} </span> and last liter  :   <span className="text-red-500">{wordToGuess.slice(-1)}</span></center>
+      {isWinner || isLoser ? <button className="bg-red-300 rounded-lg p-2 text-white" onClick={() => window.location.reload()}>try again  </button> : ''}
+      <center className="text-[30px] uppercase" > first liter is : <span className="text-red-500">{wordToGuess.slice(0, 1)} </span> and last liter  :   <span className="text-red-500">{wordToGuess.slice(-1)}</span></center>
 
       <HangmanWord
         reveal={isLoser}
